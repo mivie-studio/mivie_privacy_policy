@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Privacy Policy | Mivie</title>
+<meta name="description" content="Mivie’s privacy policy and photo-processing terms.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --color-background: #0f0f0f;
+  --color-surface: #2b2b2b;
+  --color-accent: #ffc800;
+  --color-text: #ffffff;
+  --color-text-secondary: #e1e1e1;
+  --color-text-supporting: #c7c7c7;
+  --color-text-muted: #a3a3a3;
+  --color-on-accent: #101010;
+  --color-error: #ff4d4f;
+  --color-overlay-subtle: rgba(255, 255, 255, 0.10);
+  --color-overlay-strong: rgba(255, 255, 255, 0.20);
+  --font-display: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+* { box-sizing: border-box; }
+html {
+  color-scheme: dark;
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 88px);
+}
+body {
+  margin: 0;
+  background: var(--color-background);
+  color: var(--color-text-supporting);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 3px; border-radius: 4px; }
+
+.bar {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5;
+  background: rgba(15, 15, 15, 0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--color-overlay-subtle);
+}
+.bar-inner {
+  max-width: 1080px; margin: 0 auto; padding: 16px 24px;
+  display: flex; align-items: center; gap: 10px;
+}
+.mark {
+  width: 28px; height: 28px; border-radius: 8px;
+  background: var(--color-accent); color: var(--color-on-accent);
+  display: grid; place-items: center;
+  font: 800 1rem/1 var(--font-display);
+}
+.brand { font: 700 1.125rem/1 var(--font-display); color: var(--color-text); letter-spacing: -0.01em; }
+
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+.hero { padding: 72px 0 48px; max-width: 720px; }
+.updated {
+  display: inline-block;
+  padding: 6px 14px; border-radius: 999px;
+  background: var(--color-surface); color: var(--color-text-secondary);
+  font-size: 0.875rem; margin: 0 0 24px;
+}
+h1 {
+  margin: 0 0 20px;
+  font: 800 clamp(2.75rem, 8vw, 4.75rem)/1 var(--font-display);
+  letter-spacing: -0.035em;
+  color: var(--color-text);
+}
+.lede { margin: 0; font-size: 1.1875rem; color: var(--color-text-secondary); max-width: 60ch; }
+
+.layout { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 64px; padding-bottom: 96px; }
+
+nav.toc { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 88px); align-self: start; }
+nav.toc ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; }
+nav.toc a {
+  display: block; padding: 8px 12px; border-radius: 8px;
+  color: var(--color-text-muted); text-decoration: none; font-size: 0.9375rem;
+  transition: background 0.15s, color 0.15s;
+}
+nav.toc a:hover { background: var(--color-overlay-subtle); color: var(--color-text); }
+
+main { max-width: 680px; }
+section { padding: 36px 0; border-top: 1px solid var(--color-overlay-subtle); }
+section:first-child { border-top: 0; padding-top: 0; }
+.head { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
+.num {
+  flex: none; width: 34px; height: 34px; border-radius: 50%;
+  background: var(--color-accent); color: var(--color-on-accent);
+  display: grid; place-items: center;
+  font: 800 0.9375rem/1 var(--font-display);
+}
+h2 { margin: 0; font: 700 1.5rem/1.2 var(--font-display); letter-spacing: -0.015em; color: var(--color-text); }
+section p { margin: 0; padding-left: 48px; }
+section p a { color: var(--color-accent); text-underline-offset: 3px; }
+section p a:hover { color: var(--color-text); }
+
+.callout {
+  margin: 20px 0 0 48px; padding: 14px 18px; border-radius: 12px;
+  background: var(--color-surface); border-left: 3px solid var(--color-accent);
+  color: var(--color-text); font-weight: 500;
+}
+
+.contact-card {
+  margin-top: 8px; padding: 28px; border-radius: 20px;
+  background: var(--color-surface); border: 1px solid var(--color-overlay-subtle);
+}
+.contact-card p { padding-left: 0; margin-bottom: 20px; }
+.btn {
+  display: inline-block; padding: 14px 24px; border-radius: 999px;
+  background: var(--color-accent); color: var(--color-on-accent);
+  font: 700 1rem/1 var(--font-display); text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+}
+.btn:hover { box-shadow: 0 0 0 4px var(--color-overlay-strong); }
+.btn:active { transform: translateY(1px); }
+
+footer { border-top: 1px solid var(--color-overlay-subtle); padding: 28px 0 40px; color: var(--color-text-muted); font-size: 0.875rem; }
+
+@media (max-width: 820px) {
+  .layout { grid-template-columns: 1fr; gap: 32px; }
+  nav.toc { display: none; }
+  .hero { padding: 48px 0 32px; }
+  section p, .callout { padding-left: 0; margin-left: 0; }
+  .callout { margin-top: 16px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="bar-inner">
+    <span class="mark" aria-hidden="true">M</span>
+    <span class="brand">Mivie</span>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="hero">
+    <p class="updated">Last updated 28 September 2026</p>
+    <h1>Privacy Policy</h1>
+    <p class="lede">Before you upload a selfie, please read how Mivie collects, processes, and stores your information. You can withdraw consent at any time.</p>
+  </div>
+
+  <div class="layout">
+    <nav class="toc" aria-label="Sections">
+      <ol>
+        <li><a href="#collect">What we collect</a></li>
+        <li><a href="#use">How we use your photo</a></li>
+        <li><a href="#processed">Where it is processed</a></li>
+        <li><a href="#keep">How long we keep it</a></li>
+        <li><a href="#purchases">Purchases and subscriptions</a></li>
+        <li><a href="#sharing">Sharing</a></li>
+        <li><a href="#rights">Your rights</a></li>
+        <li><a href="#terms">Terms of Use (EULA)</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ol>
+    </nav>
+
+    <main>
+      <section id="collect">
+        <div class="head"><span class="num">1</span><h2>What we collect</h2></div>
+        <p>Your selfie photo, a temporary face representation created from it to place you in the scene, and basic technical data such as device type and app version needed to deliver your result.</p>
+      </section>
+
+      <section id="use">
+        <div class="head"><span class="num">2</span><h2>How we use your photo</h2></div>
+        <p>We use your photo only to generate the moments you request. We do not use your photo or face data to train AI models, for advertising, or to identify you.</p>
+      </section>
+
+      <section id="processed">
+        <div class="head"><span class="num">3</span><h2>Where it is processed</h2></div>
+        <p>Your information is processed on secure servers in the European Union. Data is encrypted in transit and at rest. Our processing partners act only on our instructions under a data processing agreement.</p>
+      </section>
+
+      <section id="keep">
+        <div class="head"><span class="num">4</span><h2>How long we keep it</h2></div>
+        <p>Your selfie and face data are deleted automatically 30 days after upload, or immediately when you delete them. Generated moments stay in My Moments until you delete them.</p>
+      </section>
+
+      <section id="purchases">
+        <div class="head"><span class="num">5</span><h2>Purchases and subscriptions</h2></div>
+        <p>When you make a purchase or start a subscription, Apple App Store or Google Play processes your payment. Mivie receives purchase status and transaction identifiers needed to provide and manage your subscription. We do not receive or store your card or other payment details.</p>
+      </section>
+
+      <section id="sharing">
+        <div class="head"><span class="num">6</span><h2>Sharing</h2></div>
+        <p>We never sell your data. Moments are private unless you choose to share them.</p>
+      </section>
+
+      <section id="rights">
+        <div class="head"><span class="num">7</span><h2>Your rights</h2></div>
+        <p>You can access, download, or delete your data, withdraw consent, and delete your account at any time through the app’s Privacy settings or by contacting us.</p>
+      </section>
+
+      <section id="terms">
+        <div class="head"><span class="num">8</span><h2>Terms of Use (EULA)</h2></div>
+        <p>Your use of Mivie is governed by Apple’s standard Licensed Application End User License Agreement. <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">Read the Terms of Use (EULA)</a>.</p>
+      </section>
+
+      <section id="contact">
+        <div class="head"><span class="num">9</span><h2>Contact</h2></div>
+        <div class="contact-card">
+          <p>For privacy questions or requests, email info@mivie.ai.</p>
+          <a class="btn" href="mailto:info@mivie.ai">Email info@mivie.ai</a>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer>Mivie · Last updated 28 September 2026</footer>
+</div>
+</body>
+</html>
